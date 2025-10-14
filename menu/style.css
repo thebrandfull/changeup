@@ -128,7 +128,7 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    min-height: 120px;
+    height: 120px;
     border-radius: 25px;
 }
 
@@ -179,19 +179,18 @@ body {
 .card-image {
     width: 120px;
     min-width: 120px;
-    align-self: stretch;
+    height: 120px;
     overflow: hidden;
-    background: #00dfdd;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* Bottom Delivery Navigation */
@@ -288,7 +287,7 @@ body {
 
     .menu-card {
         margin-bottom: 20px;
-        min-height: 140px;
+        height: 140px;
     }
 
     .card-info {
@@ -311,7 +310,7 @@ body {
     .card-image {
         width: 140px;
         min-width: 140px;
-        align-self: stretch;
+        height: 140px;
     }
 
     .delivery-nav {
@@ -373,7 +372,7 @@ body {
 
     .menu-card {
         margin-bottom: 12px;
-        min-height: 100px;
+        height: 100px;
     }
 
     .card-info {
@@ -396,7 +395,7 @@ body {
     .card-image {
         width: 100px;
         min-width: 100px;
-        align-self: stretch;
+        height: 100px;
     }
 
     .delivery-nav {
