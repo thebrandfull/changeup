@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'Rabie';
+    src: url('../fonts/Rabie-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rabie';
+    src: url('../fonts/Rabie-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rabie', sans-serif;
+    background-color: #00dfdd;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Header — teal bg like the main site nav */
+.links-header {
+    background-color: #00dfdd;
+    padding: 50px 20px 30px;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.links-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.links-tagline {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 12px;
+}
+
+/* Content area — white bg like the about section */
+.links-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+}
+
+/* Cards — match menu-card style: white bg, 25px radius, offset shadow */
+.link-card {
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    padding: 16px 20px;
+    gap: 14px;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.link-card:active {
+    transform: translateY(-2px);
+}
+
+/* Icon circles */
+.link-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #00dfdd;
+    color: white;
+}
+
+.link-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Delivery icons — white logos need the dark teal bg */
+.link-icon.delivery-icon {
+    background-color: #00bfbd;
+}
+
+.link-icon.delivery-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.link-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.link-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.3;
+}
+
+.link-info p {
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+.link-arrow {
+    color: #00dfdd;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.link-card:hover .link-arrow {
+    transform: translateX(3px);
+}
+
+/* Section labels */
+.section-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #00dfdd;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
+
+/* Footer — back to teal */
+.links-footer {
+    text-align: center;
+    padding: 25px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #00dfdd;
+}
+
+.links-footer p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.links-footer .footer-sub {
+    margin-top: 4px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .links-header {
+        padding: 60px 30px 35px;
+    }
+
+    .links-logo {
+        height: 90px;
+        margin-bottom: 16px;
+    }
+
+    .links-tagline {
+        font-size: 20px;
+    }
+
+    .links-content {
+        padding: 40px 30px 50px;
+    }
+
+    .link-card {
+        padding: 18px 24px;
+    }
+
+    .link-info h3 {
+        font-size: 18px;
+    }
+
+    .link-info p {
+        font-size: 14px;
+    }
+
+    .link-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .link-icon.delivery-icon img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .links-header {
+        padding: 40px 15px 25px;
+    }
+
+    .links-logo {
+        height: 65px;
+    }
+
+    .links-tagline {
+        font-size: 15px;
+    }
+
+    .links-content {
+        padding: 24px 15px 30px;
+        gap: 12px;
+    }
+
+    .link-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .link-info h3 {
+        font-size: 15px;
+    }
+
+    .link-info p {
+        font-size: 12px;
+    }
+
+    .link-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .link-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link-icon.delivery-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (hover: none) {
+    .link-card:hover {
+        transform: none;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    }
+}
