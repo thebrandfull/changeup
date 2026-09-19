@@ -279,3 +279,160 @@ body {
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
     }
 }
+
+/* ============================================
+   Branch cards — one per location
+   ============================================ */
+.branch-card {
+    background: #f8f8f8;
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.branch-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.branch-pin {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #00dfdd;
+    color: #ffffff;
+}
+
+.branch-titles {
+    min-width: 0;
+}
+
+.branch-titles h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.3;
+}
+
+.branch-titles p {
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+.branch-actions {
+    /* Wrapping flex rather than 3 fixed columns: the display faces differ in
+       width per brand, so on a narrow phone the buttons drop to a second row
+       at full width instead of overflowing the card or truncating the label. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.branch-btn {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 11px 10px;
+    border-radius: 14px;
+    background: #ececec;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.branch-btn span {
+    white-space: nowrap;
+}
+
+.branch-btn svg {
+    flex-shrink: 0;
+}
+
+.branch-btn-primary {
+    background: #00dfdd;
+    color: #ffffff;
+}
+
+.branch-btn:hover {
+    transform: translateY(-2px);
+    background: #00dfdd;
+    color: #ffffff;
+}
+
+.branch-btn:active {
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    .branch-card {
+        padding: 18px 22px;
+    }
+
+    .branch-titles h3 {
+        font-size: 18px;
+    }
+
+    .branch-titles p {
+        font-size: 14px;
+    }
+
+    .branch-btn {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .branch-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .branch-pin {
+        width: 42px;
+        height: 42px;
+    }
+
+    .branch-titles h3 {
+        font-size: 15px;
+    }
+
+    .branch-titles p {
+        font-size: 12px;
+    }
+
+    .branch-btn {
+        font-size: 11px;
+        gap: 5px;
+        padding: 10px 8px;
+        border-radius: 12px;
+    }
+}
+
+@media (hover: none) {
+    .branch-btn:hover {
+        transform: none;
+        background: #ececec;
+        color: #333;
+    }
+
+    .branch-btn-primary:hover {
+        background: #00dfdd;
+        color: #ffffff;
+    }
+}
